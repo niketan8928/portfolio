@@ -5,11 +5,11 @@ const Navbar = () => {
         <div>
             <header className="navbar navbar-expand-md navbar-dark bg-dark sticky-top shadow">
                 <div className="container-fluid">
-                    <a className="navbar-brand">
+                    <div className="navbar-brand">
                         <a href="#about" className="text-white text-xl">
                             Niketan G.
                         </a>
-                    </a>
+                    </div>
                     <button
                         className="navbar-toggler"
                         type="button"
