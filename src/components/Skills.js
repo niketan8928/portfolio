@@ -1,70 +1,159 @@
-// import React from 'react'
-// import { skills  } from '../data'
+import React from "react";
+import styled from "styled-components";
+import { Tilt } from "react-tilt";
+import { skills } from "../data";
 
-// const Skills = () => {
-//   return (
-//     <div>
-//       <section id="skills" class="bg-dark py-5">
-//   <div class="container px-4 py-10">
-//     <div class="text-center mb-5">
-//       <i class="bi bi-chip w-10 inline-block mb-4"></i>
-//       <h1 class="display-4 font-medium text-white mb-4">Skills &amp; Technologies</h1>
-//       <p class="lead w-75 mx-auto">
-//         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sit
-//         ipsa delectus eum quo voluptas aspernatur accusantium distinctio
-//         possimus est.
-//       </p>
-//     </div>
-//     <div class="row row-cols-1 row-cols-sm-2 g-2">
-//       {skills.map((skill) => (
-//         <div key={skill} class="col p-2">
-//           <div class="bg-dark-gray rounded flex p-4 h-full items-center">
-//             <i class="bi bi-badge-check text-success w-6 h-6 flex-shrink-0 me-4"></i>
-//             <span class="font-medium text-white">{skill}</span>
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   </div>
-// </section>
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content-center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+`;
 
-//     </div>
-//   )
-// }
+const Wrapper = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  gap: 12px;
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+`;
 
-// export default Skills
+const Title = styled.div`
+  font-size: 52px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  color: ${({ theme }) => theme.text_primary};
+  @media (max-width: 768px) {
+    margin-top: 12px;
+    font-size: 32px;
+  }
+`;
 
-import React from 'react';
-import { skills } from '../data';
+const Desc = styled.div`
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_secondary};
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
+
+const SkillsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 50px;
+  justify-content: center;
+`;
+
+const Skill = styled.div`
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  border-radius: 16px;
+  padding: 18px 36px;
+
+  @media (max-width: 768px) {
+    max-width: 400px;
+    padding: 10px 36px;
+  }
+
+  @media (max-width: 500px) {
+    max-width: 330px;
+    padding: 10px 36px;
+  }
+`;
+
+const SkillTitle = styled.div`
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  color: ${({ theme }) => theme.text_secondary};
+`;
+
+const SkillList = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+`;
+
+const SkillItem = styled.div`
+  font-size: 16px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary + 80};
+  border: 1px solid ${({ theme }) => theme.text_primary + 80};
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  @media (max-width: 500px) {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+`;
+
+const SkillImage = styled.img`
+  width: 24px;
+  height: 24px;
+`;
 
 const Skills = () => {
   return (
-    <div>
-      <section id="skills" className="bg-dark py-4"> 
-        <div className="container px-4">
-          <div className="text-center mb-4"> 
-            <i className="bi bi-chip w-10 inline-block mb-3"></i>
-            <h1 className="display-4 font-medium text-white mb-3">Skills &amp; Technologies</h1> 
-            
-          </div>
-          <div className="row row-cols-1 row-cols-sm-2 g-2"> 
-            {skills.map((skill) => (
-              <div key={skill} className="col p-1">
-                <div className="bg-dark-gray rounded flex p-1 h-full items-center">
+    <Container id="Skills">
+      <Wrapper>
+        <Title>Skills</Title>
+        <Desc
+          style={{
+            marginBottom: "40px",
+          }}
+        >
+          Here are some of my skills on which I have been working on for the
+          past 3 years.
+        </Desc>
 
-                  <i className="bi bi-badge-check text-success w-6 h-6 flex-shrink-0 me-4"></i> 
-                  <span className="font-medium text-white">{skill}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </div>
+        <SkillsContainer>
+          {skills.map((skill, index) => (
+            <Tilt key={`tilt-${index}`}>
+              <Skill key={`skill-${index}`}>
+                <SkillTitle>{skill.title}</SkillTitle>
+                <SkillList>
+                  {skill.skills.map((item, index_x) => (
+                    <SkillItem key={`skill-x-${index_x}`}>
+                      <SkillImage src={item.image} alt={item.name} />
+                      {item.name}
+                    </SkillItem>
+                  ))}
+                </SkillList>
+              </Skill>
+            </Tilt>
+          ))}
+        </SkillsContainer>
+      </Wrapper>
+    </Container>
   );
-}
+};
 
 export default Skills;
-
-
-

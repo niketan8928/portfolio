@@ -1,24 +1,84 @@
-import React from 'react';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Contact = () => {
   return (
-    <div>
-      <section id="contact" className="relative">
-        <div className="container px-4 py-10 mx-auto flex flex-wrap sm:flex-nowrap">
-          <div className="lg:w-2/3 md:w-1/2  rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-            <div className=" relative flex flex-wrap py-6 rounded shadow-md">
-              <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                <h2 className="font-semibold  tracking-widest text-xs">EMAIL</h2>
-                <a href="mailto:nickg8928@gmail.com" className="text-indigo-400 leading-relaxed">nickg8928@gmail.com</a>
-                <h2 className="font-semibold  tracking-widest text-xs mt-4">PHONE</h2>
-                <p className="leading-relaxed">8928145452</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div
+      style={{ backgroundColor: "black", color: "white", marginTop: "20px" }}
+    >
+      <Container className="py-4">
+        <Row className="justify-content-center mb-4">
+          <Col md={2} className="text-center">
+            <h2>Contact</h2>
+          </Col>
+        </Row>
+        <Row className="justify-content-center">
+          <Col md={4} className="text-center mb-3">
+            <h2>
+              <img
+                src="https://tse1.mm.bing.net/th?id=OIP.IpB5yPUkCFHOzlmM-O7ncAHaFW&pid=Api&P=0&h=180"
+                alt="Email Logo"
+                className="img-fluid mb"
+                style={{ maxHeight: "30px", borderRadius: "5px" }}
+              />
+            </h2>
+            <a href="mailto:nickg8928@gmail.com" className="text-info">
+              Mail
+            </a>
+          </Col>
+          <Col md={4} className="text-center mb-3">
+            <h2>
+              <img
+                src="https://tse4.mm.bing.net/th?id=OIP.TIYnrsy6wV3TX312soEx5gHaHY&pid=Api&P=0&h=180"
+                alt="Phone Logo"
+                className="img-fluid mb"
+                style={{ maxHeight: "30px", borderRadius: "5px" }}
+              />
+            </h2>
+            <p>8928145452</p>
+          </Col>
+        </Row>
+        <Row className="justify-content-center">
+          <Col md={4} className="text-center mb-3">
+            <h2>
+              <img
+                src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                alt="GitHub Logo"
+                className="img-fluid mb"
+                style={{ maxHeight: "30px", borderRadius: "5px" }}
+              />
+            </h2>
+            <a
+              href="http://github.com/niketan8928"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-info"
+            >
+              Github
+            </a>
+          </Col>
+          <Col md={4} className="text-center mb-3">
+            <h2>
+              <img
+                src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG8.png"
+                alt="LinkedIn Logo"
+                className="img-fluid mb"
+                style={{ maxHeight: "30px", borderRadius: "5px" }}
+              />
+            </h2>
+            <a
+              href="http://www.linkedin.com/in/niketan-gawade"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-info"
+            >
+              Linkedin
+            </a>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
-}
+};
 
 export default Contact;
