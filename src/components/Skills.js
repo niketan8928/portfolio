@@ -61,7 +61,7 @@ const Skill = styled.div`
   width: 100%;
   max-width: 500px;
   background-color: white;
-  border: 2px solid black;
+  border: 3px solid black;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
@@ -122,37 +122,41 @@ const SkillImage = styled.img`
 
 const Skills = () => {
   return (
-    <Container id="Skills">
-      <Wrapper>
-        <Title>Skills</Title>
-        <Desc
-          style={{
-            marginBottom: "40px",
-          }}
-        >
-          Here are some of my skills on which I have been working on for the
-          past 3 years.
-        </Desc>
+    <div>
+      <section id="skills">
+        <Container>
+          <Wrapper>
+            <Title>Skills</Title>
+            <Desc
+              style={{
+                marginBottom: "40px",
+              }}
+            >
+              Here are some of my skills on which I have been working on for the
+              past 3 years.
+            </Desc>
 
-        <SkillsContainer>
-          {skills.map((skill, index) => (
-            <Tilt key={`tilt-${index}`}>
-              <Skill key={`skill-${index}`}>
-                <SkillTitle>{skill.title}</SkillTitle>
-                <SkillList>
-                  {skill.skills.map((item, index_x) => (
-                    <SkillItem key={`skill-x-${index_x}`}>
-                      <SkillImage src={item.image} alt={item.name} />
-                      {item.name}
-                    </SkillItem>
-                  ))}
-                </SkillList>
-              </Skill>
-            </Tilt>
-          ))}
-        </SkillsContainer>
-      </Wrapper>
-    </Container>
+            <SkillsContainer>
+              {skills.map((skill, index) => (
+                <Tilt key={`tilt-${index}`}>
+                  <Skill key={`skill-${index}`}>
+                    <SkillTitle>{skill.title}</SkillTitle>
+                    <SkillList>
+                      {skill.skills.map((item, index_x) => (
+                        <SkillItem key={`skill-x-${index_x}`}>
+                          <SkillImage src={item.image} alt={item.name} />
+                          {item.name}
+                        </SkillItem>
+                      ))}
+                    </SkillList>
+                  </Skill>
+                </Tilt>
+              ))}
+            </SkillsContainer>
+          </Wrapper>
+        </Container>
+      </section>
+    </div>
   );
 };
 
