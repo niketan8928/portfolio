@@ -11,9 +11,7 @@ const About = () => {
         <br className="d-none d-lg-inline-block" />I love to build amazing apps.
       </h1>
       <p className="mb-4 lead">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-        laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
-        Laborum, voluptas natus?
+        As a passionate and dedicated Software Developer, I specialize in creating efficient and scalable solutions using modern technologies. With hands-on experience in web development, I focus on building high-quality applications that meet both user needs and business goals. I am continually expanding my skills in software development, problem-solving, and collaborating with cross-functional teams to deliver impactful results.
       </p>
     </div>
     <div className="max-w-lg w-200">
