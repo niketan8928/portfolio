@@ -3,15 +3,15 @@ export const projects = [
     title: "Static GymBlog",
     subtitle: "MERN Stack",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "Discover the 'Static GymBlog,' a sleek, static website built with the powerful MERN stack. Explore engaging fitness content, blog posts, and more in a dynamic yet simple design. Visit our GymBlog for informative articles and expert advice on health, workouts, and wellness. Perfect for fitness enthusiasts! Check out the demo at GymBlog and get inspired for your next workout.",
     image: "/images/GymBlog_img.png",
     link: "https://nick8928nn.github.io/GymBlog/",
   },
   {
-    title: "React Tracks",
-    subtitle: "React and Python",
+    title: "Music Tracks",
+    subtitle: "javascript",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "React Tracks is a dynamic web application built using React and Python, designed to help users track their favorite music, albums, and artists. With an intuitive interface, users can easily explore and manage their music collections. Visit the live demo and start tracking your tracks: React Tracks",
     image: "/images/MPS_img.png",
     link: "https://nick8928nn.github.io/MPS/",
   },
@@ -219,13 +219,13 @@ export const experienceData = [
     position: "Software Developer Tranie",
     duration: "april 2022 - september 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus risus quis congue gravida.",
+      "As a .NET Developer at ANZA Software Technologies, I contributed to the design, development, and maintenance of web and desktop applications using the .NET framework. I worked with C#, ASP.NET, and various related technologies to build scalable and efficient solutions. My responsibilities included writing clean, reusable code, debugging and troubleshooting issues, and collaborating with cross-functional teams to ensure project success. This role strengthened my expertise in software development while following best practices and agile methodologies.",
   },
   {
     company: "ai Varient",
     position: "Data Science Intern",
     duration: "feburary 2023 - july 2023",
     description:
-      "Duis ullamcorper, justo eget suscipit fermentum, est nulla fermentum diam, ac lacinia justo velit nec ipsum.",
+      "As a Data Science Intern at AI Variant from February 2023 to July 2023, I gained valuable hands-on experience in analyzing and interpreting large datasets to extract meaningful insights. I worked on data cleaning, feature engineering, and model development using Python, machine learning algorithms, and statistical techniques. Collaborating with senior data scientists, I contributed to the development of predictive models and data-driven solutions that helped drive business decisions. This internship enhanced my knowledge of data science concepts, while honing my problem-solving and analytical skills.",
   },
 ];
